@@ -27,11 +27,23 @@
                                     <outletCollection property="gestureRecognizers" destination="eoS-BQ-CYQ" appends="YES" id="ffA-TI-HVc"/>
                                 </connections>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="saA-ux-rwK">
+                                <rect key="frame" x="147" y="81" width="121" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Move"/>
+                                    <segment title="Fade"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectorModeTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="86B-AX-Ypp"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="modeSelector" destination="saA-ux-rwK" id="XiV-bK-j1I"/>
                         <outlet property="target" destination="CPd-YD-zHV" id="N1c-PM-84M"/>
                     </connections>
                 </viewController>
